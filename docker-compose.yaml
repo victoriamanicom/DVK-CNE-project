@@ -6,17 +6,20 @@ services:
                         - target: 5000
                           published: 5000
                           protocol: tcp
+                depends_on:
+                        - "backend"
         backend:
                 build: ./backend
                 ports:
                         - target: 5001
                           published: 5001
                           protocol: tcp
+                environment:
+                        DATABASE_URI: ${DATABASE_URI}
+                        SECRET_KEY: ${SECRET_KEY}
         database:
                 build: ./database
                 ports:
                         - target: 3306
                           published: 3306
                           protocol: tcp
-                environment:
-                        MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
