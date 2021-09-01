@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+        frontend:
+                build: ./frontend
+                ports:
+                        - target: 5000
+                          published: 5000
+                          protocol: tcp
+        backend:
+                build: ./backend
+                ports:
+                        - target: 5001
+                          published: 5001
+                          protocol: tcp
+        database:
+                build: ./database
+                ports:
+                        - target: 3306
+                          published: 3306
+                          protocol: tcp
