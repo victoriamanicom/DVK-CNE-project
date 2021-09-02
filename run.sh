@@ -3,7 +3,7 @@ cd frontend
 python3 -m pytest --cov application --cov-report html
 cd ..
 cd backend
-python3 -m pytest --cov application --cov-report html
+python3 -m pytest --cov application --cov-report xml
 cd ..
 docker-compose up -d
 docker-compose logs frontend
