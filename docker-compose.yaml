@@ -17,9 +17,3 @@ services:
                 environment:
                         DATABASE_URI: ${DATABASE_URI}
                         SECRET_KEY: ${SECRET_KEY}
-        database:
-                build: ./database
-                ports:
-                        - target: 3306
-                          published: 3306
-                          protocol: tcp
