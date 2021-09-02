@@ -1,3 +1,4 @@
+echo "Webhook successful"
 docker-compose build
 cd frontend
 python3 -m pytest --cov application
