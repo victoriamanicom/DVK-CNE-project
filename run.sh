@@ -6,4 +6,3 @@ cd ..
 docker-compose up -d
 docker-compose logs frontend
 docker-compose logs backend
-docker-compose logs database
