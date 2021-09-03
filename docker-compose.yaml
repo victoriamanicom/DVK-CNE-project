@@ -1,15 +1,5 @@
 version: "3.8"
 services:
-        nginx:
-                image: nginx:latest
-                ports:
-                        - target: 80
-                          published: 80
-                          protocol: tcp
-                volumes:
-                        - type: bind
-                          source: ./nginx/nginx.conf
-                          target: /etc/nginx/nginx.conf
         frontend:
                 build: ./frontend
                 ports:
@@ -27,3 +17,13 @@ services:
                 environment:
                         DATABASE_URI: ${DATABASE_URI}
                         SECRET_KEY: ${SECRET_KEY}
+        nginx:
+                image: nginx:latest
+                ports:
+                        - target: 80
+                          published: 80
+                          protocol: tcp
+                volumes:
+                        - type: bind
+                          source: ./nginx/nginx.conf
+                          target: /etc/nginx/nginx.conf
