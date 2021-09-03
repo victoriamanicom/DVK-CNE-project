@@ -17,9 +17,13 @@ services:
                 environment:
                         DATABASE_URI: ${DATABASE_URI}
                         SECRET_KEY: ${SECRET_KEY}
-        database:
-                build: ./database
+        nginx:
+                image: nginx:latest
                 ports:
-                        - target: 3306
-                          published: 3306
+                        - target: 80
+                          published: 80
                           protocol: tcp
+                volumes:
+                        - type: bind
+                          source: ./nginx/nginx.conf
+                          target: /etc/nginx/nginx.conf
