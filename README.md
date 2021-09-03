@@ -1,5 +1,8 @@
 # Cloud Native Engineer - Practical Project - DevOps
 ### Danny Martin, Katie Barrett, Victoria Manicom
+
+Presentation slides: https://docs.google.com/presentation/d/1pIJySPZy3qjYgMyTHKtYCCml5ExUF7kjlZoyIgkLwmA/edit#slide=id.gea6eb9a28e_0_107
+
 QAC SFIA2 Project
 =================
 
