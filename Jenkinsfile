@@ -25,9 +25,4 @@ pipeline {
 	    }
 	}
     }
-    post {
-	always {
-	    archiveArtifacts artifacts: 'frontend/htmlcov/index.html, backend/htmlcov/index.html'
-	}
-    }
 }
